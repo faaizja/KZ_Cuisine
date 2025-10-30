@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useCart } from "@/lib/cart-context"
 import { ShoppingBag } from "lucide-react"
+import logo from "../components/logo.svg"
 
 export function Navigation() {
   const { itemCount } = useCart()
@@ -13,7 +14,7 @@ export function Navigation() {
       <div className="container mx-auto px-3 md:px-4 py-3 md:py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 md:gap-3">
           <Image 
-            src="/Logo.svg" 
+            src= {logo} 
             alt="KZ's Cuisine" 
             width={40} 
             height={40} 
