@@ -1,123 +1,132 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Link from "next/link"
-import { ArrowRight, Flame, Heart, Users } from "lucide-react"
+import { ArrowRight, Flame, Heart, Users, Facebook, Instagram } from "lucide-react"
 
 export default function HomePageClient() {
+  const [showStoryPopup, setShowStoryPopup] = useState(false)
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    const timer = window.setTimeout(() => {
+      setShowStoryPopup(true)
+    }, 800)
+
+    return () => window.clearTimeout(timer)
+  }, [])
+
+  const handleClosePopup = () => {
+    setShowStoryPopup(false)
+  }
+
   return (
     <>
       {/* Hero Section */}
       <section className="relative text-foreground">
-        <div className="container mx-auto px-4 py-12 md:py-24 lg:py-32 text-center">
-          <div className="max-w-5xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black tracking-tight mb-6 md:mb-8 text-balance drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-              Authentic Pakistani Taste,
+        <div className="container mx-auto lg:mt-12 px-4 py-12 md:py-24 lg:py-32">
+          <div className="max-w-5xl mx-auto text-center space-y-6 md:space-y-8">
+          
+
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-balance drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] animate-fade-in-up animation-delay-1000">
+              Authentic Pakistani Taste
               <br />
               <span className="text-accent drop-shadow-[0_2px_15px_rgba(196,30,58,0.6)]">
-                Crafted from Family Tradition
+                From Our Family Kitchen to Yours
               </span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed text-balance drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-              Where heritage meets heat. Experience the real taste of Pakistan, brought to Canada with love.
+
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed text-balance drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              Karahis, pulaos and grills cooked low and slow — just like back home in Pakistan, now served fresh in
+              Canada.
             </p>
-            <Link href="/menu">
-              <button className="btn-primary inline-flex items-center gap-2 text-sm md:text-base">
-                Explore Menu
-                <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
-      {/* Story Section */}
-      <section className="border-t border-white/10">
-        <div className="container mx-auto px-4 py-12 md:py-20 lg:py-24">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 text-center animate-fade-in drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-              The Story Behind <span className="text-accent">KZ's Cuisine</span>
-            </h2>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+              <Link href="/menu">
+                <button className="btn-primary inline-flex items-center gap-2 text-sm md:text-base transition-transform duration-200 hover:-translate-y-0.5">
+                  Explore Menu
+                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+                </button>
+              </Link>
 
-            <div className="space-y-8 text-lg md:text-xl leading-relaxed text-white/85 animate-fade-in-up drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-              <p>
-                Our story began in a small kitchen filled with the aroma of sizzling karahi and slow cooked pulao, a
-                recipe passed down through generations. For decades, our father has been perfecting the art of authentic
-                Pakistani cooking, blending spices not just by measure, but by heart.
-              </p>
-
-              <p>
-                When we moved to Canada, we realized something was missing, the true taste of home. Not the fast food
-                version, not a simplified fusion, but the real karahi, cooked the traditional way, bursting with bold
-                flavours that tell a story of Lahore's streets and family gatherings.
-              </p>
-
-              <p>
-                At KZ's Cuisine, we're not just serving dishes, we're serving memories. From tender boneless chicken to
-                slow cooked mutton and lamb, every plate is a reflection of our roots, our pride, and our passion for
-                bringing people together through food.
-              </p>
-
-              <p className="text-white font-bold text-xl md:text-2xl lg:text-3xl text-center pt-6 md:pt-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-                This isn't just food. It's heritage served hot.
+              <p className="text-xs sm:text-sm text-white/70">
+                Made-to-order for families, gatherings and weekend cravings.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Featured Dishes Section
       <section className="border-t border-white/10">
         <div className="container mx-auto px-4 py-12 md:py-20">
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 max-w-6xl mx-auto">
-            <div className="text-center p-8">
-              <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6 drop-shadow-xl">
-                <Flame className="w-10 h-10 text-accent" />
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-12">
+              <div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                  Signature Pakistani Dishes
+                </h2>
+                <p className="mt-3 text-base md:text-lg text-white/80 max-w-xl drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+                  A focused menu built around the dishes we grew up eating — slow-cooked, deeply spiced and designed to
+                  share around the table.
+                </p>
               </div>
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-                100% Authentic Recipes
-              </h3>
-              <p className="text-base md:text-lg lg:text-xl text-white/75 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-                Traditional Pakistani flavors passed down through generations
-              </p>
+
+              <Link href="/menu" className="md:self-center">
+                <button className="btn-primary inline-flex items-center gap-2 text-sm md:text-base transition-transform duration-200 hover:-translate-y-0.5">
+                  View Today&apos;s Menu
+                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+                </button>
+              </Link>
             </div>
 
-            <div className="text-center p-8 ">
-              <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6 drop-shadow-xl">
-                <Heart className="w-10 h-10 text-accent" />
+            <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="group rounded-2xl border border-white/10 bg-black/40 p-6 md:p-7 shadow-lg backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:border-accent/70">
+                <h3 className="text-xl md:text-2xl font-semibold mb-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+                  Chicken Karahi (Boneless)
+                </h3>
+                <p className="text-sm md:text-base text-white/80 mb-3">
+                  A rich, tomato-based karahi cooked on high flame with green chilies, fresh ginger and our house masala
+                  blend.
+                </p>
+                <p className="text-xs md:text-sm text-white/60">Perfect for 2–3 people · Best enjoyed with naan or roti</p>
               </div>
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-                Cooked Fresh to Order
-              </h3>
-              <p className="text-base md:text-lg lg:text-xl text-white/75 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-                Every dish prepared with care and attention to detail
-              </p>
-            </div>
 
-            <div className="text-center p-8  sm:col-span-2 md:col-span-1">
-              <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6 drop-shadow-xl">
-                <Users className="w-10 h-10 text-accent" />
+              <div className="group rounded-2xl border border-white/10 bg-black/40 p-6 md:p-7 shadow-lg backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:border-accent/70">
+                <h3 className="text-xl md:text-2xl font-semibold mb-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+                  Beef Pulao
+                </h3>
+                <p className="text-sm md:text-base text-white/80 mb-3">
+                  Fragrant basmati rice simmered in beef stock, whole spices and caramelized onions for deep, layered
+                  flavour.
+                </p>
+                <p className="text-xs md:text-sm text-white/60">Slow-cooked for hours · Comfort food from our family table</p>
               </div>
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-                Family Owned, Community Driven
-              </h3>
-              <p className="text-base md:text-lg lg:text-xl text-white/75 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-                Bringing people together through authentic Pakistani cuisine
-              </p>
-            </div>
 
-            
+              <div className="group rounded-2xl border border-white/10 bg-black/40 p-6 md:p-7 shadow-lg backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:border-accent/70 sm:col-span-2 lg:col-span-1">
+                <h3 className="text-xl md:text-2xl font-semibold mb-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+                  Mix Grill Platter
+                </h3>
+                <p className="text-sm md:text-base text-white/80 mb-3">
+                  A shareable spread of seekh kebabs, tikka and grilled chicken, marinated overnight in classic Pakistani
+                  spices.
+                </p>
+                <p className="text-xs md:text-sm text-white/60">Ideal for gatherings · Limited quantities each weekend</p>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="border-t border-white/10">
         <div className="container mx-auto px-4 py-12 md:py-20 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-            Ready to Experience <span className="text-accent">Authentic Pakistani Flavors?</span>
+            Ready to Experience <span className="text-accent">Real Pakistani Flavours?</span>
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-white/85 mb-8 md:mb-10 max-w-2xl mx-auto drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-            Pre-order now and taste the tradition. One karahi at a time.
+            Pre-order now and let us cook for your next family dinner, gathering or weekend treat.
           </p>
           <Link href="/menu">
             <button className="btn-primary inline-flex items-center gap-2 text-sm md:text-base">
@@ -127,6 +136,118 @@ export default function HomePageClient() {
           </Link>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 bg-black/70">
+        <div className="container mx-auto px-4 py-10 md:py-14">
+          <div className="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.5fr)] items-start">
+            <div className="space-y-4 md:space-y-5">
+              <h3 className="text-xl md:text-2xl font-semibold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+                Visit KZ&apos;s Cuisine
+              </h3>
+
+              <div className="space-y-2 text-sm md:text-base text-white/80">
+                <p className="font-medium text-white">PurePrep Commissary Kitchen</p>
+                <p>Surrey, BC</p>
+              </div>
+
+              <div className="space-y-1 text-sm md:text-base text-white/80">
+                <p>
+                  <span className="font-medium text-white">Phone:</span> <span>(604) 765-0400</span>
+                </p>
+                <p>
+                  <span className="font-medium text-white">Email:</span> <span>kzdcuisines@gmail.com</span>
+                </p>
+              </div>
+
+              <div className="space-y-1 text-sm md:text-base text-white/80">
+                <p className="font-medium text-white">Hours</p>
+                <p>Friday – Sunday · 4:30 PM – 10:00 PM</p>
+              </div>
+
+              <div className="pt-3">
+                <p className="text-xs uppercase tracking-[0.18em] text-white/60 mb-2">Follow Us</p>
+                <div className="flex flex-wrap items-center gap-3">
+                  <Link
+                    href="#"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-xs md:text-sm text-white/85 transition hover:border-accent hover:text-accent"
+                  >
+                    <Facebook className="h-4 w-4" />
+                    <span>Facebook</span>
+                  </Link>
+                  <Link
+                    href="#"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-xs md:text-sm text-white/85 transition hover:border-accent hover:text-accent"
+                  >
+                    <Instagram className="h-4 w-4" />
+                    <span>Instagram</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="h-full w-full">
+              <div className="aspect-video overflow-hidden rounded-2xl border border-white/15 bg-black/40 shadow-lg backdrop-blur-sm">
+                <iframe
+                  title="KZ's Cuisine at PurePrep Commissary Kitchen"
+                  src="https://www.google.com/maps?q=PurePrep+Commissary+Kitchen&output=embed"
+                  className="h-full w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 border-t border-white/10 pt-4 text-center text-xs text-white/60">
+            <p>&copy; {new Date().getFullYear()} KZ&apos;s Cuisine. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+
+      {showStoryPopup && (
+        <div className="fixed bottom-5 right-5 z-40 w-[92vw] max-w-md sm:max-w-lg animate-fade-in-up">
+          <div className="pointer-events-auto overflow-hidden rounded-3xl border border-accent/40 bg-gradient-to-tr from-black/90 via-black/80 to-accent/20 shadow-[0_0_35px_rgba(212,9,36,0.65)] backdrop-blur-xl">
+            <div className="flex gap-4 p-5 sm:p-6">
+              <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/25 shadow-[0_0_25px_rgba(212,9,36,0.8)]">
+                <Flame className="h-6 w-6 text-accent" />
+              </div>
+
+              <div className="flex-1 space-y-2">
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-accent/80">
+                      Story & Values
+                    </p>
+                    <h3 className="text-sm sm:text-base font-semibold text-white">
+                      The Heart Behind KZ&apos;s Cuisine
+                    </h3>
+                  </div>
+
+                  <button
+                    type="button"
+                    aria-label="Close story about KZ's Cuisine"
+                    onClick={handleClosePopup}
+                    className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/25 text-xs text-white/70 transition hover:border-white/60 hover:text-white"
+                  >
+                    ×
+                  </button>
+                </div>
+
+                <p className="text-xs sm:text-[13px] text-white/85 leading-relaxed">
+                  We&apos;re a family-run Pakistani kitchen built around a stove that&apos;s rarely off — karahis bubbling,
+                  pulaos steaming and grills smoking the way our father cooked back home.
+                </p>
+                <p className="text-[11px] sm:text-xs text-white/70 leading-relaxed">
+                  No shortcuts, no fusion trends. Just slow-cooked, spice-layered dishes meant to be shared with the
+                  people you care about.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }

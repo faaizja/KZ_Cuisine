@@ -64,7 +64,7 @@ export default function MenuClient() {
     <main className="container mx-auto px-4 py-12 md:py-20 min-h-screen">
       <div className="text-center mb-12 md:mb-20">
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-          KZ's CUISINE <span className="text-accent">Menu</span>
+          KZ's CUISINE <span className="text-accent">MENU</span>
         </h1>
         <p className="text-white/85 text-base md:text-lg lg:text-xl drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
           Authentic Pakistani flavors
@@ -104,12 +104,12 @@ export default function MenuClient() {
                     <span className="text-xl sm:text-2xl md:text-3xl font-black text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
                       ${item.price}
                     </span>
-                    <button
+                    {/* <button
                       onClick={() => addItem(item)}
                       className="btn-primary inline-flex items-center gap-1 md:gap-2 text-sm md:text-base px-3 md:px-4 py-2"
                     >
                       <Plus className="w-3 h-3 md:w-4 md:h-4" /> Add
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}

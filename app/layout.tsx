@@ -23,11 +23,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[url('/Background.png')] bg-fixed bg-cover bg-center`}>
-        <CartProvider>
-          <Navigation />
-          {children}
-        </CartProvider>
+      <body className={inter.className}>
+        <div className="relative min-h-screen">
+          <video
+            className="fixed inset-0 -z-10 h-full w-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/bg-video.mp4" type="video/mp4" />
+          </video>
+
+          <div className="relative z-10 min-h-screen ">
+            <CartProvider>
+              <Navigation />
+              {children}
+            </CartProvider>
+          </div>
+        </div>
       </body>
     </html>
   )
