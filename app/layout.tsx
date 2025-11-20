@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="relative min-h-screen">
           <video
-            className="fixed inset-0 -z-10 h-full w-full object-cover"
+            className="fixed inset-0 -z-10 h-full w-full object-cover sm:h-full" //fix the image fit in mobile view
             autoPlay
             loop
             muted
@@ -35,7 +35,7 @@ export default function RootLayout({
             <source src="/bg-video.mp4" type="video/mp4" />
           </video>
 
-          <div className="relative z-10 min-h-screen ">
+          <div className="relative z-10 min-h-screen flex flex-col">
             <CartProvider>
               <Navigation />
               {children}
