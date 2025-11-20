@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="relative min-h-screen">
           <video
-            className="fixed inset-0 -z-10 h-full w-full object-cover sm:h-full" //fix the image fit in mobile view
+            className="fixed inset-0 -z-10 h-screen w-full object-cover min-h-screen"
             autoPlay
             loop
             muted
