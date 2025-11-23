@@ -7,66 +7,58 @@ import { Plus } from "lucide-react"
 const menuItems = [
   {
     id: "1",
-    name: "Chicken Pulao Platter with Boneless Grilled Chicken",
-    description: "Fragrant basmati rice (pulao) served with tender boneless grilled chicken. Choice of tomato sauce or green yogurt chutney.",
-    price: 14.99,
+    name: "Package 1 – Beef Pulao + Mutton Korma",
+    description: "Beef pulao served with rich, slow-cooked mutton korma.",
+    price: "17/person",
     category: "Main Menu",
     image: "/pulao-grilled-chicken.jpeg",
   },
   {
     id: "2",
-    name: "Beef Pulao Platter (Roasted Shank)",
-    description: "Flavourful beef pulao topped with a juicy roasted beef shank. Choice of tomato sauce or green yogurt chutney.",
-    price: 14.99,
+    name: "Package 2 – Chicken Pulao + Chicken Korma",
+    description: "Chicken pulao paired with creamy, mildly spiced chicken korma.",
+    price: "13/person",
     category: "Main Menu",
     image: "/pulao-roasted-shank.jpeg",
   },
   {
     id: "3",
-    name: "Chicken Karahi Pulao Platter (Boneless)",
-    description: "Boneless chicken karahi cooked in a rich, spicy gravy and served over pulao rice.",
-    price: 15.99,
+    name: "Package 3 – Beef Pulao + Chicken Korma ",
+    description: "Flavourful beef pulao served with tender chicken korma.",
+    price: "15/person",
     category: "Main Menu",
     image: "/pulao-chicken-karahi.jpeg",
   },
   {
     id: "4",
-    name: "Chicken Karahi (Bone-in - Family Style)",
-    description: "Bone-in chicken karahi in a spicy, tomato-based gravy. Feeds 4–5 people. Naan not included.",
-    price: "24.99 Half / $44.99 Full",
+    name: "Package 4 – Chicken Biryani ",
+    description: "Classic chicken biryani made with basmati rice, aromatic spices, and tender chicken pieces.",
+    price: "15/person",
     category: "Main Menu",
     image: "/chicken-karahi.jpeg",
   },
-  {
-    id: "5",
-    name: "Mutton Karahi (Bone-in – Family Style) ",
-    description: "Tender bone-in mutton cooked in a rich karahi masala. Feeds 4–5 people. Naan not included.",
-    price: "29.99 Half / $49.99 Full",
-    category: "Main Menu",
-    image: "/mutton-karahi.jpeg",
-  },
-  {
-   id: "6",
-    name: "Naan",
-    description: "Plain Naan",
-    price: 2.50,
-    category: "Soft Drinks & Naan",
-    image: "/placeholder.svg?height=300&width=300", 
-  },
-  {
-   id: "7",
-    name: "Soft Drink",
-    description: "Choose between any soft drink",
-    price: 2.50,
-    category: "Soft Drinks & Naan",
-    image: "/placeholder.svg?height=300&width=300", 
-  }
+  // {
+  //  id: "5",
+  //   name: "Naan",
+  //   description: "Plain Naan",
+  //   price: 2.50,
+  //   category: "Soft Drinks & Naan",
+  //   image: "/placeholder.svg?height=300&width=300", 
+  // },
+  // {
+  //  id: "6",
+  //   name: "Soft Drink",
+  //   description: "Choose between any soft drink",
+  //   price: 2.50,
+  //   category: "Soft Drinks & Naan",
+  //   image: "/placeholder.svg?height=300&width=300", 
+  // }
 ]
 
 export default function MenuClient() {
   const { addItem } = useCart()
 
-  const categories = ["Main Menu", "Soft Drinks & Naan"]
+  const categories = ["Main Menu"]
 
   return (
     <main className="container mx-auto px-4 py-12 md:py-20 min-h-screen">
@@ -75,7 +67,7 @@ export default function MenuClient() {
         <span className="text-accent">CATERING MENU</span>
         </h1>
         <p className="text-white/85 text-base md:text-lg lg:text-xl drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-          Authentic Pakistani flavors
+          For 50–200+ guests
         </p>
       </div>
 

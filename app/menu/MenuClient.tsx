@@ -51,7 +51,7 @@ const menuItems = [
     description: "Plain Naan",
     price: 2.50,
     category: "Soft Drinks & Naan",
-    image: "/placeholder.svg?height=300&width=300", 
+    image: "/naan.jpeg", 
   },
   {
    id: "7",
@@ -59,7 +59,7 @@ const menuItems = [
     description: "Choose between any soft drink",
     price: 2.50,
     category: "Soft Drinks & Naan",
-    image: "/placeholder.svg?height=300&width=300", 
+    image: "/drinks.jpeg", 
   }
 ]
 
