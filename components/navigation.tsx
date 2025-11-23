@@ -25,24 +25,32 @@ export function Navigation() {
           </span>
         </Link>
 
-        <div className="flex items-center gap-4 md:gap-8">
+        <div className="flex items-center gap-10">
           <Link href="/" className="text-xs md:text-sm font-medium hover:text-accent transition-colors">
             About
           </Link>
           <Link href="/menu" className="text-xs md:text-sm font-medium hover:text-accent transition-colors">
             Menu
           </Link>
+          <Link href="/catering-menu" className="text-xs md:text-sm font-medium hover:text-accent transition-colors">
+            Catering
+          </Link>
+
+
           <Link
             href="/cart"
             className="relative flex items-center gap-2 text-xs md:text-sm font-medium hover:text-accent transition-colors"
           >
-            <ShoppingBag className="w-4 h-4 md:w-5 md:h-5" />
+            {/* <ShoppingBag className="w-4 h-4 md:w-5 md:h-5" />
             {itemCount > 0 && (
               <span className="absolute -top-2 -right-2 bg-accent text-background text-xs w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center font-bold">
                 {itemCount}
               </span>
-            )}
+            )} */}
+            
           </Link>
+
+          
         </div>
       </div>
     </nav>

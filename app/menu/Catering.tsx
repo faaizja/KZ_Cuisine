@@ -72,7 +72,7 @@ export default function MenuClient() {
     <main className="container mx-auto px-4 py-12 md:py-20 min-h-screen">
       <div className="text-center mb-12 md:mb-20">
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-        <span className="text-accent">MENU</span>
+        <span className="text-accent">CATERING MENU</span>
         </h1>
         <p className="text-white/85 text-base md:text-lg lg:text-xl drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
           Authentic Pakistani flavors
