@@ -165,7 +165,7 @@ export default function HomePageClient() {
                 <p>Friday – Sunday · 4:30 PM – 10:00 PM</p>
               </div>
 
-              <div className="pt-3">
+              {/* <div className="pt-3">
                 <p className="text-xs uppercase tracking-[0.18em] text-white/60 mb-2">Follow Us</p>
                 <div className="flex flex-wrap items-center gap-3">
                   <Link
@@ -183,7 +183,9 @@ export default function HomePageClient() {
                     <span>Instagram</span>
                   </Link>
                 </div>
-              </div>
+              </div> */}
+
+              
             </div>
 
             <div className="h-full w-full">
