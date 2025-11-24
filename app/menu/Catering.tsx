@@ -11,7 +11,7 @@ const menuItems = [
     description: "Beef pulao served with rich, slow-cooked mutton korma.",
     price: "17/person",
     category: "Main Menu",
-    image: "/pulao-grilled-chicken.jpeg",
+    image: "/package1.jpeg",
   },
   {
     id: "2",
@@ -19,7 +19,7 @@ const menuItems = [
     description: "Chicken pulao paired with creamy, mildly spiced chicken korma.",
     price: "13/person",
     category: "Main Menu",
-    image: "/pulao-roasted-shank.jpeg",
+    image: "/package2.jpeg",
   },
   {
     id: "3",
@@ -27,7 +27,7 @@ const menuItems = [
     description: "Flavourful beef pulao served with tender chicken korma.",
     price: "15/person",
     category: "Main Menu",
-    image: "/pulao-chicken-karahi.jpeg",
+    image: "/package3.jpeg",
   },
   {
     id: "4",
@@ -35,7 +35,7 @@ const menuItems = [
     description: "Classic chicken biryani made with basmati rice, aromatic spices, and tender chicken pieces.",
     price: "15/person",
     category: "Main Menu",
-    image: "/chicken-karahi.jpeg",
+    image: "/package4.jpeg",
   },
   // {
   //  id: "5",
