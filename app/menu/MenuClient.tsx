@@ -8,7 +8,7 @@ const menuItems = [
   {
     id: "1",
     name: "Chicken Pulao Platter with Boneless Grilled Chicken",
-    description: "Fragrant basmati rice (pulao) served with tender boneless grilled chicken. Choice of tomato sauce or green yogurt chutney.",
+    description: "Fragrant rice platter served with tender boneless grilled chicken. Choice of tomato sauce or green yogurt chutney.",
     price: 14.99,
     category: "Main Menu",
     image: "/pulao-grilled-chicken.jpeg",
@@ -16,7 +16,7 @@ const menuItems = [
   {
     id: "2",
     name: "Beef Pulao Platter (Roasted Shank)",
-    description: "Flavourful beef pulao topped with a juicy roasted beef shank. Choice of tomato sauce or green yogurt chutney.",
+    description: "Flavourful beef broth rice topped with a juicy roasted beef shank. Choice of tomato sauce or green yogurt chutney.",
     price: 14.99,
     category: "Main Menu",
     image: "/pulao-roasted-shank.jpeg",
@@ -24,7 +24,7 @@ const menuItems = [
   {
     id: "3",
     name: "Chicken Karahi Pulao Platter (Boneless)",
-    description: "Boneless chicken karahi cooked in a rich, spicy gravy and served over pulao rice.",
+    description: "Boneless chicken karahi cooked in a rich, spicy gravy and served over rice.",
     price: 15.99,
     category: "Main Menu",
     image: "/pulao-chicken-karahi.jpeg",
@@ -32,7 +32,7 @@ const menuItems = [
   {
     id: "4",
     name: "Chicken Karahi (Bone-in - Family Style)",
-    description: "Bone-in chicken karahi in a spicy, tomato-based gravy. Feeds 4–5 people. Naan not included.",
+    description: "Bone-in chicken karahi in a spicy, tomato-based gravy. Half feeds 1-2 people, full feeds 4–5 people.",
     price: "24.99 Half / $44.99 Full",
     category: "Main Menu",
     image: "/chicken-karahi.jpeg",
@@ -40,7 +40,7 @@ const menuItems = [
   {
     id: "5",
     name: "Mutton Karahi (Bone-in – Family Style) ",
-    description: "Tender bone-in mutton cooked in a rich karahi masala. Feeds 4–5 people. Naan not included.",
+    description: "Tender bone-in mutton cooked in a rich karahi masala. Half feeds 1-2 people, full feeds 4–5 people.",
     price: "29.99 Half / $49.99 Full",
     category: "Main Menu",
     image: "/mutton-karahi.jpeg",
@@ -124,6 +124,78 @@ export default function MenuClient() {
           </div>
         </section>
       ))}
+
+  {/* Footer */}
+      <footer className="border-t border-white/10 bg-black/70">
+        <div className="container mx-auto px-4 py-10 md:py-14">
+          <div className="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.5fr)] items-start">
+            <div className="space-y-4 md:space-y-5">
+              <h3 className="text-xl md:text-2xl font-semibold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+                Visit KZ&apos;s Cuisine
+              </h3>
+
+              <div className="space-y-2 text-sm md:text-base text-white/80">
+                <p className="font-medium text-white">PurePrep Commissary Kitchen</p>
+                <p>Surrey, BC</p>
+              </div>
+
+              <div className="space-y-1 text-sm md:text-base text-white/80">
+                <p>
+                  <span className="font-medium text-white">Phone:</span> <span>(604) 765-0400</span>
+                </p>
+                <p>
+                  <span className="font-medium text-white">Email:</span> <span>kzdcuisines@gmail.com</span>
+                </p>
+              </div>
+
+              <div className="space-y-1 text-sm md:text-base text-white/80">
+                <p className="font-medium text-white">Hours</p>
+                <p>Friday – Sunday · 4:30 PM – 9:30 PM</p>
+              </div>
+
+              {/* <div className="pt-3">
+                <p className="text-xs uppercase tracking-[0.18em] text-white/60 mb-2">Follow Us</p>
+                <div className="flex flex-wrap items-center gap-3">
+                  <Link
+                    href="#"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-xs md:text-sm text-white/85 transition hover:border-accent hover:text-accent"
+                  >
+                    <Facebook className="h-4 w-4" />
+                    <span>Facebook</span>
+                  </Link>
+                  <Link
+                    href="#"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-xs md:text-sm text-white/85 transition hover:border-accent hover:text-accent"
+                  >
+                    <Instagram className="h-4 w-4" />
+                    <span>Instagram</span>
+                  </Link>
+                </div>
+              </div> */}
+
+              
+            </div>
+
+            <div className="h-full w-full">
+              <div className="aspect-video overflow-hidden rounded-2xl border border-white/15 bg-black/40 shadow-lg backdrop-blur-sm">
+                <iframe
+                  title="KZ's Cuisine at PurePrep Commissary Kitchen"
+                  src="https://www.google.com/maps?q=PurePrep+Commissary+Kitchen&output=embed"
+                  className="h-full w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 border-t border-white/10 pt-4 text-center text-xs text-white/60">
+            <p>&copy; {new Date().getFullYear()} KZ&apos;s Cuisine. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+
     </main>
   )
 }

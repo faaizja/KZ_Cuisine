@@ -38,7 +38,7 @@ export default function HomePageClient() {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed text-balance drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-              Karahis, pulaos and grills cooked low and slow — just like back home in Pakistan, now served fresh in
+              Karahis, pulaos and grills cooked low and slow. Just like back home, now served fresh in
               Canada.
             </p>
 
@@ -125,9 +125,7 @@ export default function HomePageClient() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
             Ready to Experience <span className="text-accent">Real Pakistani Flavours?</span>
           </h2>
-          <p className="text-base md:text-lg lg:text-xl text-white/85 mb-8 md:mb-10 max-w-2xl mx-auto drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-            Pre-order now and let us cook for your next family dinner, gathering or weekend treat.
-          </p>
+
           <Link href="/menu">
             <button className="btn-primary inline-flex items-center gap-2 text-sm md:text-base">
               View Full Menu
@@ -162,7 +160,7 @@ export default function HomePageClient() {
 
               <div className="space-y-1 text-sm md:text-base text-white/80">
                 <p className="font-medium text-white">Hours</p>
-                <p>Friday – Sunday · 4:30 PM – 10:00 PM</p>
+                <p>Friday – Sunday · 4:30 PM – 9:30 PM</p>
               </div>
 
               {/* <div className="pt-3">
