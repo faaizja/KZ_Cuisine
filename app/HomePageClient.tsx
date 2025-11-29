@@ -38,7 +38,7 @@ export default function HomePageClient() {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed text-balance drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-              Karahis, pulaos and grills cooked low and slow. Just like back home, now served fresh in
+              Karahis and rice platters cooked low and slow. Just like back home, now served fresh in
               Canada.
             </p>
 
@@ -221,7 +221,7 @@ export default function HomePageClient() {
 
                 <p className="text-xs sm:text-[13px] text-white/85 leading-relaxed">
                   We&apos;re a family-run Pakistani kitchen built around a stove that&apos;s rarely off — karahis bubbling,
-                  pulaos steaming and grills smoking the way our father cooked back home.
+                  rice platters steaming and grills smoking the way it's done back home.
                 </p>
                 <p className="text-[11px] sm:text-xs text-white/70 leading-relaxed">
                   No shortcuts, no fusion trends. Just slow-cooked, spice-layered dishes meant to be shared with the
