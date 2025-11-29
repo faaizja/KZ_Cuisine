@@ -96,9 +96,9 @@ export default function MenuClient() {
                     <Image
                       src={item.image || "/placeholder.svg"}
                       alt={item.name}
-                      width={300}
-                      height={300}
-                      className="w-full h-full object-center"
+                      width={200}
+                      height={100}
+                      className="w-96 h-80 object-center"
                     />
                   </div>
                   

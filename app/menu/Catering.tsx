@@ -90,7 +90,7 @@ export default function MenuClient() {
                       alt={item.name}
                       width={300}
                       height={300}
-                      className="w-full h-full object-center"
+                      className="w-96 h-72 object-center"
                     />
                   </div>
                   

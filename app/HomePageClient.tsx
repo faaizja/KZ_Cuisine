@@ -119,22 +119,6 @@ export default function HomePageClient() {
         </div>
       </section> */}
 
-      {/* CTA Section */}
-      <section className="border-t border-white/10">
-        <div className="container mx-auto px-4 py-12 md:py-20 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-            Ready to Experience <span className="text-accent">Real Pakistani Flavours?</span>
-          </h2>
-
-          <Link href="/menu">
-            <button className="btn-primary inline-flex items-center gap-2 text-sm md:text-base">
-              View Full Menu
-              <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-            </button>
-          </Link>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black/70">
         <div className="container mx-auto px-4 py-10 md:py-14">
