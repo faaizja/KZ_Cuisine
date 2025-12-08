@@ -144,7 +144,7 @@ export default function HomePageClient() {
 
               <div className="space-y-1 text-sm md:text-base text-white/80">
                 <p className="font-medium text-white">Hours</p>
-                <p>Friday – Sunday · 4:30 PM – 9:30 PM</p>
+                <p>Thursday – Sunday · 4:30 PM – 9 PM</p>
               </div>
 
               {/* <div className="pt-3">
