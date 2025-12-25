@@ -142,7 +142,7 @@ export default function MenuClient() {
 
               <div className="space-y-1 text-sm md:text-base text-white/80">
                 <p className="font-medium text-white">Hours</p>
-                <p>Thursday – Sunday · 4:30 PM – 9 PM</p>
+                <p>Thursday – Saturday · 5 PM – 9 PM</p>
               </div>
 
               {/* <div className="pt-3">
