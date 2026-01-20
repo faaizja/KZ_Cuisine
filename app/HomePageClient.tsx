@@ -58,67 +58,6 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Featured Dishes Section
-      <section className="border-t border-white/10">
-        <div className="container mx-auto px-4 py-12 md:py-20">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-12">
-              <div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-                  Signature Pakistani Dishes
-                </h2>
-                <p className="mt-3 text-base md:text-lg text-white/80 max-w-xl drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-                  A focused menu built around the dishes we grew up eating — slow-cooked, deeply spiced and designed to
-                  share around the table.
-                </p>
-              </div>
-
-              <Link href="/menu" className="md:self-center">
-                <button className="btn-primary inline-flex items-center gap-2 text-sm md:text-base transition-transform duration-200 hover:-translate-y-0.5">
-                  View Today&apos;s Menu
-                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-                </button>
-              </Link>
-            </div>
-
-            <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="group rounded-2xl border border-white/10 bg-black/40 p-6 md:p-7 shadow-lg backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:border-accent/70">
-                <h3 className="text-xl md:text-2xl font-semibold mb-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-                  Chicken Karahi (Boneless)
-                </h3>
-                <p className="text-sm md:text-base text-white/80 mb-3">
-                  A rich, tomato-based karahi cooked on high flame with green chilies, fresh ginger and our house masala
-                  blend.
-                </p>
-                <p className="text-xs md:text-sm text-white/60">Perfect for 2–3 people · Best enjoyed with naan or roti</p>
-              </div>
-
-              <div className="group rounded-2xl border border-white/10 bg-black/40 p-6 md:p-7 shadow-lg backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:border-accent/70">
-                <h3 className="text-xl md:text-2xl font-semibold mb-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-                  Beef Pulao
-                </h3>
-                <p className="text-sm md:text-base text-white/80 mb-3">
-                  Fragrant basmati rice simmered in beef stock, whole spices and caramelized onions for deep, layered
-                  flavour.
-                </p>
-                <p className="text-xs md:text-sm text-white/60">Slow-cooked for hours · Comfort food from our family table</p>
-              </div>
-
-              <div className="group rounded-2xl border border-white/10 bg-black/40 p-6 md:p-7 shadow-lg backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:border-accent/70 sm:col-span-2 lg:col-span-1">
-                <h3 className="text-xl md:text-2xl font-semibold mb-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-                  Mix Grill Platter
-                </h3>
-                <p className="text-sm md:text-base text-white/80 mb-3">
-                  A shareable spread of seekh kebabs, tikka and grilled chicken, marinated overnight in classic Pakistani
-                  spices.
-                </p>
-                <p className="text-xs md:text-sm text-white/60">Ideal for gatherings · Limited quantities each weekend</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black/70">
         <div className="container mx-auto px-4 py-10 md:py-14">

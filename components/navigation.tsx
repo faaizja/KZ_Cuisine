@@ -38,20 +38,9 @@ export function Navigation() {
           <Link href="/catering-menu" className="text-xs md:text-sm font-medium hover:text-accent transition-colors">
             Catering
           </Link>
-
-{/* 
-          <Link
-            href="/cart"
-            className="relative flex items-center gap-2 text-xs md:text-sm font-medium hover:text-accent transition-colors"
-          >
-            <ShoppingBag className="w-4 h-4 md:w-5 md:h-5" />
-            {itemCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-accent text-background text-xs w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center font-bold">
-                {itemCount}
-              </span>
-            )}
-            
-          </Link> */}
+          <Link href="/meal-prep" className="text-xs md:text-sm font-medium hover:text-accent transition-colors">
+            Meal prep
+          </Link>
         </div>
 
         {/* Mobile hamburger */}

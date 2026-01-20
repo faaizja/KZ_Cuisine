@@ -7,27 +7,29 @@ import { Plus } from "lucide-react"
 const menuItems = [
   {
     id: "1",
-    name: "Package 1 – Chicken Pulao + Chicken Korma",
+    name: "Package 1 – Chicken Biryani ",
+    description: "Classic chicken biryani made with basmati rice, aromatic spices, and tender chicken pieces.",
+    price: "12/person",
+    category: "Main Menu",
+    image: "/package4.jpeg",
+    
+  },
+  {
+    id: "2",
+    name: "Package 2 – Chicken Pulao + Chicken Korma",
     description: "Chicken pulao paired with creamy, mildly spiced chicken korma.",
     price: "13/person",
     category: "Main Menu",
     image: "/package2.jpeg",
+  
   },
   {
-    id: "2",
-    name: "Package 2 – Beef Pulao + Chicken Korma ",
+    id: "3",
+    name: "Package 3 – Beef Pulao + Chicken Korma ",
     description: "Beef-flavoured rice served with tender chicken korma.",
     price: "15/person",
     category: "Main Menu",
     image: "/package3.jpeg",
-  },
-  {
-    id: "3",
-    name: "Package 3 – Chicken Biryani ",
-    description: "Classic chicken biryani made with basmati rice, aromatic spices, and tender chicken pieces.",
-    price: "15/person",
-    category: "Main Menu",
-    image: "/package4.jpeg",
   },
   {
     id: "4",
